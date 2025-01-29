@@ -56,7 +56,7 @@ export default function Projects() {
                 <p className="text-gray-600 mb-4 line-clamp-3">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((tech, i) => (
-                    <span key={i} className="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">
+                    <span key={i} className="px-3 py-1 bg-primary-100 text-primary-600 rounded-full text-sm">
                       {tech}
                     </span>
                   ))}
@@ -64,7 +64,7 @@ export default function Projects() {
                 <div className="flex space-x-4">
                   <a 
                     href={project.github} 
-                    className="flex items-center text-gray-600 hover:text-indigo-600 transition-colors"
+                    className="flex items-center text-gray-600 hover:text-primary-600 transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -73,7 +73,7 @@ export default function Projects() {
                   </a>
                   <a 
                     href={project.live} 
-                    className="flex items-center text-gray-600 hover:text-indigo-600 transition-colors"
+                    className="flex items-center text-gray-600 hover:text-primary-600 transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

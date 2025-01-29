@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Send } from 'lucide-react';
+import { Mail, MessageSquare, Send } from 'lucide-react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -22,7 +22,6 @@ export default function Contact() {
     setStatus('submitting');
 
     try {
-      // For now, we'll use a mailto link as a fallback
       const mailtoUrl = `mailto:nithish6@gmail.com?subject=Portfolio Contact from ${formData.name}&body=${encodeURIComponent(
         `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
       )}`;
@@ -52,7 +51,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent"
                     placeholder="John Doe"
                   />
                 </div>
@@ -65,7 +64,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -79,15 +78,15 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows={4}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent"
                   placeholder="Your message here..."
                 ></textarea>
               </div>
               <button
                 type="submit"
                 disabled={status === 'submitting'}
-                className={`w-full px-8 py-3 bg-indigo-600 text-white rounded-lg transition-colors flex items-center justify-center ${
-                  status === 'submitting' ? 'opacity-75 cursor-not-allowed' : 'hover:bg-indigo-700'
+                className={`w-full px-8 py-3 bg-primary-600 text-white rounded-lg transition-colors flex items-center justify-center ${
+                  status === 'submitting' ? 'opacity-75 cursor-not-allowed' : 'hover:bg-primary-700'
                 }`}
               >
                 <Send className="w-5 h-5 mr-2" />
@@ -102,7 +101,7 @@ export default function Contact() {
               )}
             </form>
             <div className="mt-8 flex justify-center space-x-6">
-              <a href="mailto:nithish6@gmail.com" className="flex items-center text-gray-600 hover:text-indigo-600">
+              <a href="mailto:nithish6@gmail.com" className="flex items-center text-gray-600 hover:text-primary-600">
                 <Mail className="w-5 h-5 mr-2" />
                 nithish6@gmail.com
               </a>
