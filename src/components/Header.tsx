@@ -17,10 +17,10 @@ export default function Header() {
             <a href="#contact" className="hover:text-indigo-600 transition-colors">Contact</a>
           </nav>
           <div className="flex items-center space-x-4">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/nithishkumar16" target="_blank" rel="noopener noreferrer">
               <Github className="w-5 h-5 hover:text-indigo-600 transition-colors" />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://linkedin.com/in/nithishkumarvenkatesan" target="_blank" rel="noopener noreferrer">
               <Linkedin className="w-5 h-5 hover:text-indigo-600 transition-colors" />
             </a>
             <a href="mailto:your.email@example.com">
